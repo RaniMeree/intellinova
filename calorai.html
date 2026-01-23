@@ -85,16 +85,18 @@
     <!-- Overview Section -->
     <section class="product-overview">
         <div class="container">
-            <div class="overview-content">
-                <h2 class="section-title">Transform Your Health Journey</h2>
-                <p class="overview-text">
-                    CalorAI is your intelligent companion for achieving your health and fitness goals. Powered by advanced AI technology, CalorAI makes food logging fast, accurate, and effortless. Whether you're counting calories, tracking macros, or monitoring essential nutrients, CalorAI adapts to your lifestyle and helps you make informed decisions about your nutrition.
-                </p>
-                <p class="overview-text">
-                    Unlike basic calorie counters, CalorAI combines AI food recognition, comprehensive nutrition tracking, meal planning, and a social hub — giving you everything you need in one powerful app.
-                </p>
-                <div style="text-align: center; margin-top: 40px;">
-                    <img src="assets/home.jpg" alt="CalorAI Home Screen - Daily Calorie Progress" style="max-width: 300px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+            <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="section-title">Transform Your Health Journey</h2>
+                    <p class="overview-text">
+                        CalorAI is your intelligent companion for achieving your health and fitness goals. Powered by advanced AI technology, CalorAI makes food logging fast, accurate, and effortless. Whether you're counting calories, tracking macros, or monitoring essential nutrients, CalorAI adapts to your lifestyle and helps you make informed decisions about your nutrition.
+                    </p>
+                    <p class="overview-text">
+                        Unlike basic calorie counters, CalorAI combines AI food recognition, comprehensive nutrition tracking, meal planning, and a social hub — giving you everything you need in one powerful app.
+                    </p>
+                </div>
+                <div style="flex: 0 0 300px; text-align: center;">
+                    <img src="assets/home.jpg" alt="CalorAI Home Screen - Daily Calorie Progress" style="max-width: 300px; width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
             </div>
         </div>
@@ -109,45 +111,53 @@
             <div class="features-showcase">
                 <!-- AI-Powered Tracking -->
                 <div class="feature-showcase-card">
-                    <div class="feature-icon-large">📸</div>
-                    <h3>AI-Powered Food Tracking</h3>
-                    <p>Log your meals in 6 different ways with advanced AI recognition technology:</p>
-                    <ul class="feature-list-bullets">
-                        <li>📸 Snap a photo of your meal</li>
-                        <li>🖼️ Upload an existing photo</li>
-                        <li>🎥 Use the video scanner for real-time logging</li>
-                        <li>⌨️ Type the food name</li>
-                        <li>🎤 Use voice commands with the microphone</li>
-                        <li>💾 Select from your saved customized meals</li>
-                    </ul>
-                    <div style="text-align: center; margin-top: 30px;">
-                        <img src="assets/protionsizeestimation.png" alt="AI Portion Size Estimation" style="max-width: 280px; border-radius: 16px; box-shadow: var(--shadow-md);">
-                        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);">AI automatically estimates portion sizes</p>
+                    <div style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 280px;">
+                            <div class="feature-icon-large">📸</div>
+                            <h3>AI-Powered Food Tracking</h3>
+                            <p>Log your meals in 6 different ways with advanced AI recognition technology:</p>
+                            <ul class="feature-list-bullets">
+                                <li>📸 Snap a photo of your meal</li>
+                                <li>🖼️ Upload an existing photo</li>
+                                <li>🎥 Use the video scanner for real-time logging</li>
+                                <li>⌨️ Type the food name</li>
+                                <li>🎤 Use voice commands with the microphone</li>
+                                <li>💾 Select from your saved customized meals</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 0 0 280px; text-align: center;">
+                            <img src="assets/protionsizeestimation.png" alt="AI Portion Size Estimation" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);">AI automatically estimates portion sizes</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Comprehensive Nutrition Tracking -->
                 <div class="feature-showcase-card">
-                    <div class="feature-icon-large">🧪</div>
-                    <h3>Comprehensive Nutrition Tracking</h3>
-                    <p>Track not just calories, but essential vitamins, minerals, and nutrients:</p>
-                    <div class="nutrition-categories">
-                        <div class="nutrition-category">
-                            <h4>Vitamins</h4>
-                            <p>D, C, B12, Folate, A</p>
+                    <div style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 280px;">
+                            <div class="feature-icon-large">🧪</div>
+                            <h3>Comprehensive Nutrition Tracking</h3>
+                            <p>Track not just calories, but essential vitamins, minerals, and nutrients:</p>
+                            <div class="nutrition-categories">
+                                <div class="nutrition-category">
+                                    <h4>Vitamins</h4>
+                                    <p>D, C, B12, Folate, A</p>
+                                </div>
+                                <div class="nutrition-category">
+                                    <h4>Minerals</h4>
+                                    <p>Iron, Calcium, Magnesium, Zinc, Potassium</p>
+                                </div>
+                                <div class="nutrition-category">
+                                    <h4>Other Nutrients</h4>
+                                    <p>Fiber, Omega-3, Water, Cholesterol, Saturated Fat, Trans Fat, Sodium, Sugar, Caffeine, Alcohol</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="nutrition-category">
-                            <h4>Minerals</h4>
-                            <p>Iron, Calcium, Magnesium, Zinc, Potassium</p>
+                        <div style="flex: 0 0 280px; text-align: center;">
+                            <img src="assets/vitamins.png" alt="Vitamins and Minerals Tracking" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);">Detailed vitamins and minerals breakdown</p>
                         </div>
-                        <div class="nutrition-category">
-                            <h4>Other Nutrients</h4>
-                            <p>Fiber, Omega-3, Water, Cholesterol, Saturated Fat, Trans Fat, Sodium, Sugar, Caffeine, Alcohol</p>
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-top: 30px;">
-                        <img src="assets/vitamins.png" alt="Vitamins and Minerals Tracking" style="max-width: 280px; border-radius: 16px; box-shadow: var(--shadow-md);">
-                        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);">Detailed vitamins and minerals breakdown</p>
                     </div>
                 </div>
 
