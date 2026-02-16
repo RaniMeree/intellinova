@@ -682,49 +682,50 @@ a {
 
 .feature-card {
     position: relative;
-    padding: 32px;
+    padding: 20px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 16px;
+    border-radius: 12px;
     transition: var(--transition-smooth);
 }
 
 .feature-card:hover {
     border-color: var(--border-accent);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--glow-cyan-sm);
 }
 
 .feature-number {
     position: absolute;
-    top: 20px;
-    right: 24px;
+    top: 12px;
+    right: 16px;
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--bg-tertiary);
     line-height: 1;
 }
 
 .feature-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--accent-cyan);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .feature-card h4 {
-    font-size: 1.15rem;
-    margin-bottom: 12px;
+    font-size: 1rem;
+    margin-bottom: 8px;
     color: var(--text-primary);
 }
 
 .feature-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
+    line-height: 1.5;
 }
 
 /* ===========================
@@ -1504,9 +1505,11 @@ a {
 }
 
 .overview-image img {
-    max-width: 100%;
+    max-width: 60%;
     border-radius: 16px;
     box-shadow: var(--glow-cyan-sm);
+    display: block;
+    margin: 0 auto;
 }
 
 .overview-features {
@@ -1541,11 +1544,11 @@ a {
 }
 
 .feature-showcase-card {
-    padding: 40px;
+    padding: 24px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 16px;
-    margin-bottom: 24px;
+    border-radius: 12px;
+    margin-bottom: 16px;
     transition: var(--transition-smooth);
 }
 
@@ -1555,8 +1558,8 @@ a {
 
 .feature-showcase-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
     align-items: center;
 }
 
@@ -1569,13 +1572,13 @@ a {
 }
 
 .feature-showcase-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
 .feature-showcase-text > p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
 }
 
 .feature-showcase-image {
@@ -1583,9 +1586,11 @@ a {
 }
 
 .feature-showcase-image img {
-    max-width: 100%;
+    max-width: 55%;
     border-radius: 12px;
     margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
 }
 
 .feature-showcase-image span {
@@ -1619,24 +1624,24 @@ a {
 .nutrition-categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 16px;
+    gap: 10px;
+    margin-top: 12px;
 }
 
 .nutrition-category {
-    padding: 16px;
+    padding: 10px 12px;
     background: var(--bg-tertiary);
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .nutrition-category h4 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--accent-cyan);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .nutrition-category p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
 }
 
@@ -1647,30 +1652,31 @@ a {
 }
 
 .feature-mini-card {
-    padding: 32px;
+    padding: 18px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 16px;
+    border-radius: 12px;
     transition: var(--transition-smooth);
 }
 
 .feature-mini-card:hover {
     border-color: var(--border-accent);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 }
 
 .feature-mini-card .feature-icon-large {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .feature-mini-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .feature-mini-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
+    line-height: 1.5;
 }
 
 /* How It Works */
@@ -1682,15 +1688,15 @@ a {
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 48px;
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .step-card {
-    padding: 32px;
+    padding: 20px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 16px;
+    border-radius: 12px;
     text-align: center;
     position: relative;
 }
@@ -1710,8 +1716,8 @@ a {
 }
 
 .step-number {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1719,20 +1725,21 @@ a {
     border: 1px solid var(--border-accent);
     border-radius: 50%;
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--accent-cyan);
-    margin: 0 auto 20px;
+    margin: 0 auto 12px;
 }
 
 .step-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
 }
 
 .step-card p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
+    line-height: 1.4;
 }
 
 /* CTA Buttons Group */
