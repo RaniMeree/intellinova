@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grain-overlay"></div>
+    <div class="ambient-light"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Intellinova Labs" style="height: 40px; margin-right: 10px;">
-                    <span class="logo-text">Intellinova Labs</span>
+                    <div class="logo-mark">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Intellinova</span>
                 </a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -34,19 +42,53 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="product-hero juridik-hero">
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="glow-orb glow-orb-1"></div>
+            <div class="glow-orb glow-orb-2"></div>
+        </div>
         <div class="container">
             <div class="product-hero-content">
                 <div class="product-logo-section">
-                    <div class="juridik-logo-placeholder">⚖️</div>
+                    <span class="section-tag">LegalTech</span>
                     <h1 class="product-title">Juridik AI</h1>
-                    <p class="product-tagline">Your AI-Powered Legal Assistant</p>
+                    <p class="product-tagline">Your AI-Powered Legal Assistant for Swedish Law</p>
                     <p class="product-description">Get instant answers to legal questions, analyze documents, and navigate Swedish law with confidence.</p>
                     <div class="product-cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Get Started Free</a>
+                        <a href="contact.html" class="btn btn-primary">
+                            <span>Get Started Free</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
                         <a href="#features" class="btn btn-secondary">Learn More</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Availability</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Questions Answered</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Documents Analyzed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Accuracy Rate</span>
                 </div>
             </div>
         </div>
@@ -55,267 +97,94 @@
     <!-- Overview Section -->
     <section class="product-overview">
         <div class="container">
-            <div class="overview-content">
-                <h2 class="section-title">Transforming Legal Services with AI</h2>
-                <p class="overview-text">
-                    Juridik AI is a cutting-edge legal technology platform that leverages artificial intelligence to make legal services more accessible, efficient, and affordable. Specifically designed for Swedish law, our platform helps individuals, businesses, and legal professionals navigate complex legal matters with confidence.
-                </p>
-                <p class="overview-text">
-                    Whether you need quick answers to legal questions, want to analyze contracts, or require assistance with legal research, Juridik AI provides instant, accurate, and reliable support 24/7.
-                </p>
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <span class="section-tag">Overview</span>
+                    <h2>Navigate Swedish Law <span class="accent-text">with Confidence</span></h2>
+                    <p>Juridik AI is your AI-powered legal assistant for Swedish law. Our platform makes legal services more accessible, efficient, and affordable for individuals, businesses, and legal professionals.</p>
+                    <p>Whether you need quick answers to legal questions, help analyzing contracts, or guidance through Swedish regulations, Juridik AI is here to assist.</p>
+                </div>
+                <div class="overview-features">
+                    <div class="feature-mini">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 4L20 8V16L12 20L4 16V8L12 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 12L16 14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Instant Legal Answers</span>
+                    </div>
+                    <div class="feature-mini">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="4" y="6" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 10H12M8 14H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Document Analysis</span>
+                    </div>
+                    <div class="feature-mini">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="6" y="10" width="12" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 10V8C10 5.79 11.79 4 14 4C16.21 4 18 5.79 18 8V10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Secure & Private</span>
+                    </div>
+                    <div class="feature-mini">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 4V20M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Compliance Updates</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Section -->
+    <!-- Features Section -->
     <section class="features-section" id="features">
         <div class="container">
-            <h2 class="section-title">Why Choose Juridik AI?</h2>
-            <div class="juridik-features-grid">
-                <div class="juridik-feature-card">
-                    <div class="feature-icon-large">🤖</div>
-                    <h3>AI-Powered</h3>
-                    <p>Advanced AI trained on Swedish legal documents and case law. Our sophisticated natural language processing understands legal context and provides accurate, relevant answers.</p>
-                </div>
-
-                <div class="juridik-feature-card">
-                    <div class="feature-icon-large">⚡</div>
-                    <h3>Instant Answers</h3>
-                    <p>Get immediate responses to your legal questions 24/7. No more waiting for office hours or scheduling appointments for simple inquiries.</p>
-                </div>
-
-                <div class="juridik-feature-card">
-                    <div class="feature-icon-large">📚</div>
-                    <h3>Document Analysis</h3>
-                    <p>Upload and analyze contracts, agreements, and legal documents. Our AI identifies key clauses, potential risks, and important terms automatically.</p>
-                </div>
-
-                <div class="juridik-feature-card">
-                    <div class="feature-icon-large">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>Your data is encrypted and never shared with third parties. We maintain the highest standards of data security and client confidentiality.</p>
-                </div>
+            <div class="section-header centered">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Powerful <span class="accent-text">Capabilities</span></h2>
+                <p class="section-subtitle">Everything you need for Swedish legal assistance</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Key Features Section -->
-    <section class="features-showcase-section">
-        <div class="container">
-            <h2 class="section-title">Comprehensive Legal Solutions</h2>
             
-            <div class="features-showcase">
-                <!-- Legal Question Answering -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">💬</div>
-                    <h3>Interactive Legal Consultation</h3>
-                    <p>Ask legal questions in natural language and receive clear, understandable answers based on Swedish law. Our AI assistant can help with:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Employment law questions</li>
-                        <li>Contract interpretation</li>
-                        <li>Tenant and landlord rights</li>
-                        <li>Consumer protection issues</li>
-                        <li>Family law matters</li>
-                        <li>Business formation and compliance</li>
-                    </ul>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 8V14L18 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Instant Answers</h4>
+                    <p>Get immediate responses to legal questions 24/7. Our AI understands Swedish law and provides accurate information.</p>
                 </div>
-
-                <!-- Document Analysis -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">📄</div>
-                    <h3>Intelligent Document Analysis</h3>
-                    <p>Upload any legal document for comprehensive AI-powered analysis:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Automatic clause extraction and categorization</li>
-                        <li>Risk assessment and flag potential issues</li>
-                        <li>Key terms and obligations identification</li>
-                        <li>Compliance checking against Swedish regulations</li>
-                        <li>Comparison with standard agreements</li>
-                        <li>Plain language summaries of complex terms</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="4" y="6" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12H16M8 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Document Analysis</h4>
+                    <p>Upload and analyze contracts, agreements, and legal documents for potential issues and recommendations.</p>
                 </div>
-
-                <!-- Legal Research -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">🔍</div>
-                    <h3>Advanced Legal Research</h3>
-                    <p>Access a comprehensive database of Swedish legal information:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Search across laws, regulations, and case precedents</li>
-                        <li>AI-powered relevance ranking</li>
-                        <li>Citation and reference tracking</li>
-                        <li>Historical law versions and amendments</li>
-                        <li>Cross-reference related legal provisions</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="6" y="8" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 8V6C10 3.79 11.79 2 14 2C16.21 2 18 3.79 18 6V8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Secure & Private</h4>
+                    <p>Your data is encrypted and never shared with third parties. Full GDPR compliance ensured.</p>
                 </div>
-
-                <!-- Template Generation -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">📝</div>
-                    <h3>Document Drafting Assistant</h3>
-                    <p>Create legal documents with AI assistance:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Access to customizable legal templates</li>
-                        <li>AI-guided document completion</li>
-                        <li>Automatic clause suggestions</li>
-                        <li>Compliance verification</li>
-                        <li>Version tracking and collaboration tools</li>
-                    </ul>
-                </div>
-
-                <!-- Case Prediction -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">📊</div>
-                    <h3>Predictive Analytics</h3>
-                    <p>Make informed decisions with data-driven insights:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Case outcome predictions based on historical data</li>
-                        <li>Settlement value estimations</li>
-                        <li>Litigation risk assessment</li>
-                        <li>Timeline and cost projections</li>
-                    </ul>
-                </div>
-
-                <!-- Compliance Monitoring -->
-                <div class="feature-showcase-card">
-                    <div class="feature-icon-large">🎯</div>
-                    <h3>Compliance Monitoring</h3>
-                    <p>Stay up-to-date with regulatory changes:</p>
-                    <ul class="feature-list-bullets">
-                        <li>Automatic tracking of new laws and regulations</li>
-                        <li>Industry-specific compliance alerts</li>
-                        <li>Impact assessment for your business</li>
-                        <li>Action recommendations for compliance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How Juridik AI Works</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Ask Your Question</h3>
-                    <p>Type your legal question or upload a document in plain language.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>AI Analysis</h3>
-                    <p>Our AI analyzes your query against Swedish law and case precedents.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Get Clear Answers</h3>
-                    <p>Receive detailed, understandable answers with relevant legal references.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Take Action</h3>
-                    <p>Use the insights to make informed decisions or proceed with legal actions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases -->
-    <section class="use-cases-section">
-        <div class="container">
-            <h2 class="section-title">Who Uses Juridik AI?</h2>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <h3>👤 Individuals</h3>
-                    <p>Get quick answers to everyday legal questions, understand your rights, and review contracts before signing.</p>
-                </div>
-                <div class="use-case-card">
-                    <h3>🏢 Small Businesses</h3>
-                    <p>Access affordable legal assistance, draft contracts, ensure compliance, and manage legal risks.</p>
-                </div>
-                <div class="use-case-card">
-                    <h3>⚖️ Legal Professionals</h3>
-                    <p>Streamline legal research, automate document review, and enhance productivity with AI-powered tools.</p>
-                </div>
-                <div class="use-case-card">
-                    <h3>🏛️ Corporate Legal Teams</h3>
-                    <p>Manage high volumes of contracts, monitor compliance, and make data-driven legal decisions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Stack -->
-    <section class="tech-stack-section">
-        <div class="container">
-            <h2 class="section-title">Advanced Legal Technology</h2>
-            <div class="tech-details">
-                <div class="tech-category-card">
-                    <h3>🧠 Natural Language Processing</h3>
-                    <ul>
-                        <li>Swedish language specialized models</li>
-                        <li>Legal terminology understanding</li>
-                        <li>Context-aware answer generation</li>
-                        <li>Multi-document comprehension</li>
-                    </ul>
-                </div>
-                <div class="tech-category-card">
-                    <h3>📚 Knowledge Base</h3>
-                    <ul>
-                        <li>Complete Swedish legal code</li>
-                        <li>Historical case law database</li>
-                        <li>Continuously updated regulations</li>
-                        <li>Legal precedent analysis</li>
-                    </ul>
-                </div>
-                <div class="tech-category-card">
-                    <h3>🔒 Security & Compliance</h3>
-                    <ul>
-                        <li>End-to-end encryption</li>
-                        <li>GDPR compliant</li>
-                        <li>Attorney-client privilege protection</li>
-                        <li>Secure cloud infrastructure</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-        <div class="container">
-            <h2 class="section-title">The Juridik AI Advantage</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h4>Cost-Effective</h4>
-                    <p>Get legal assistance at a fraction of traditional legal consultation costs.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⏱️</div>
-                    <h4>Time-Saving</h4>
-                    <p>Instant answers mean no waiting days or weeks for legal guidance.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h4>Accurate</h4>
-                    <p>AI trained on millions of legal documents ensures high accuracy.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📱</div>
-                    <h4>Accessible</h4>
-                    <p>Access legal help anytime, anywhere from any device.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🇸🇪</div>
-                    <h4>Swedish Law Expert</h4>
-                    <p>Specialized in Swedish legal system and regulations.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔄</div>
-                    <h4>Always Updated</h4>
-                    <p>Our AI stays current with the latest legal changes and precedents.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M4 14H24M14 4C17 4 20 7 20 10C20 13 17 14 14 14C11 14 8 13 8 10C8 7 11 4 14 4Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Compliance Monitoring</h4>
+                    <p>Stay updated with regulatory changes and requirements affecting your business or situation.</p>
                 </div>
             </div>
         </div>
@@ -323,13 +192,23 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
+        <div class="cta-bg">
+            <div class="grid-pattern"></div>
+            <div class="glow-orb glow-orb-3"></div>
+        </div>
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Get Started?</h2>
-                <p>Join thousands of users who trust Juridik AI for legal assistance</p>
+                <span class="cta-tag">Get Started</span>
+                <h2>Ready to <span class="accent-text">Transform</span>?</h2>
+                <p>Get instant answers to your Swedish legal questions today.</p>
                 <div class="cta-buttons-group">
-                    <a href="contact.html" class="btn btn-primary">Create Free Account</a>
-                    <a href="contact.html" class="btn btn-secondary">Request Demo</a>
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span>Get Started Free</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -339,36 +218,48 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="assets/logo.png" alt="Intellinova Labs" style="height: 30px;">
-                        Intellinova Labs
-                    </h3>
-                    <p>AI consultancy providing intelligent solutions for your business.</p>
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-mark">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Intellinova</span>
+                    </a>
+                    <p>AI consultancy delivering intelligent solutions for forward-thinking businesses.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>📧 info@intellinovalabs.com</li>
-                        <li>📞 +46 700 456 718</li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>info@intellinovalabs.com</li>
+                            <li>+46 700 456 718</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Juridik AI. All rights reserved.</p>
+                <p>&copy; 2026 Intellinova Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

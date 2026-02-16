@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grain-overlay"></div>
+    <div class="ambient-light"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Intellinova Labs" style="height: 40px; margin-right: 10px;">
-                    <span class="logo-text">Intellinova Labs</span>
+                    <div class="logo-mark">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Intellinova</span>
                 </a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -36,83 +44,131 @@
 
     <!-- Page Header -->
     <section class="page-header">
+        <div class="page-header-bg">
+            <div class="grid-pattern"></div>
+            <div class="glow-orb glow-orb-1"></div>
+        </div>
         <div class="container">
-            <h1 class="page-title">About <span class="gradient-text">Intellinova Labs</span></h1>
-            <p class="page-subtitle">AI consultancy delivering innovative artificial intelligence solutions</p>
+            <span class="section-tag">Our Story</span>
+            <h1 class="page-title">About <span class="accent-text">Intellinova</span></h1>
+            <p class="page-subtitle">Pioneering AI solutions that transform industries and empower businesses</p>
         </div>
     </section>
 
     <!-- Company Story -->
-    <section class="company-story">
+    <section class="about-story">
         <div class="container">
             <div class="story-content">
-                <h2 class="section-title">Our Story</h2>
-                <p class="story-text">
-                    Intellinova Labs was founded with a vision: to make artificial intelligence accessible, practical, and transformative for businesses through innovative solutions. We recognized that while AI technology is advancing rapidly, many organizations struggle to harness its potential effectively.
-                </p>
-                <p class="story-text">
-                    By combining technical expertise with a pragmatic, business-focused approach, we deliver AI solutions that create real value. From healthcare to legal services and child safety, we're applying AI innovation across diverse industries.
-                </p>
-                <p class="story-text">
-                    As a growing startup, we focus on developing practical solutions that solve real problems and create new opportunities for efficiency and growth. Our commitment to ethical AI practices, data privacy, and user-centric design guides everything we build.
-                </p>
+                <h2 class="section-title">Our <span class="accent-text">Story</span></h2>
+                <div class="story-text">
+                    <p>Intellinova Labs was founded with a vision: to make artificial intelligence accessible, practical, and transformative for businesses through innovative solutions. We recognized that while AI technology is advancing rapidly, many organizations struggle to harness its potential effectively.</p>
+                    <p>By combining technical expertise with a pragmatic, business-focused approach, we deliver AI solutions that create real value. From healthcare to legal services and child safety, we're applying AI innovation across diverse industries.</p>
+                    <p>As a growing startup, we focus on developing practical solutions that solve real problems and create new opportunities for efficiency and growth. Our commitment to ethical AI practices, data privacy, and user-centric design guides everything we build.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision & Mission Detailed -->
-    <section class="vision-mission-detailed">
+    <!-- Vision & Mission -->
+    <section class="vm-section">
         <div class="container">
-            <div class="vm-grid-detailed">
-                <div class="vm-card-detailed">
-                    <div class="vm-icon-large">🎯</div>
-                    <h2>Our Vision</h2>
-                    <p>As an emerging AI startup, we aspire to empower businesses to unlock their potential through intelligent, scalable, and ethical AI solutions that transform industries and improve lives.</p>
-                    <p>We envision a future where AI technology is seamlessly integrated into everyday business operations, making organizations more efficient, decisions more informed, and outcomes more predictable. Our goal is to democratize AI, making it accessible to companies regardless of their size or technical sophistication.</p>
+            <div class="vm-grid">
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="4" fill="currentColor"/>
+                            <path d="M16 4V8M16 24V28M4 16H8M24 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To democratize AI technology, making powerful intelligent solutions accessible to businesses of all sizes—transforming industries and improving lives through ethical, scalable AI.</p>
+                    <p style="margin-top: 16px;">We envision a future where AI technology is seamlessly integrated into everyday business operations, making organizations more efficient, decisions more informed, and outcomes more predictable.</p>
+                    <div class="card-edge"></div>
                 </div>
-                <div class="vm-card-detailed">
-                    <div class="vm-icon-large">🚀</div>
-                    <h2>Our Mission</h2>
-                    <p>To develop innovative AI solutions that solve real-world challenges and create meaningful value for our clients. As a startup, we're committed to delivering practical, impactful AI applications that make a difference.</p>
-                    <p>Our mission extends beyond just building technology—we aim to be trusted partners in our clients' success. We focus on understanding unique business challenges, developing tailored solutions, and ensuring successful implementation with measurable results.</p>
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L28 12V28L16 20L4 28V12L16 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 12L22 15V21L16 18L10 21V15L16 12Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To develop innovative AI solutions that solve real-world challenges and create meaningful value for our clients—delivering practical, impactful applications that make a difference.</p>
+                    <p style="margin-top: 16px;">Our mission extends beyond building technology—we aim to be trusted partners in our clients' success, focusing on understanding unique challenges and delivering measurable results.</p>
+                    <div class="card-edge"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Values -->
-    <section class="core-values">
+    <section class="values-section">
         <div class="container">
-            <h2 class="section-title">Our Core Values</h2>
+            <div class="section-header centered">
+                <span class="section-tag">What Drives Us</span>
+                <h2 class="section-title">Core <span class="accent-text">Values</span></h2>
+            </div>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">💡</div>
-                    <h3>Innovation</h3>
-                    <p>We constantly push boundaries, exploring new technologies and methodologies to deliver state-of-the-art AI solutions.</p>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4L24 10V22L14 26L4 22V10L14 4Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="14" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>We constantly push boundaries, exploring new technologies to deliver state-of-the-art AI solutions.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Integrity</h3>
-                    <p>We operate with transparency, honesty, and ethical practices in all our interactions and AI implementations.</p>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4C17 4 20 7 20 10C20 13 17 14 14 14C11 14 8 13 8 10C8 7 11 4 14 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 14V26" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 20H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Integrity</h4>
+                    <p>We operate with transparency, honesty, and ethical practices in all our interactions.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Excellence</h3>
-                    <p>We are committed to delivering the highest quality solutions, exceeding expectations at every turn.</p>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 8V14L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>We're committed to delivering the highest quality solutions, exceeding expectations at every turn.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🌍</div>
-                    <h3>Impact</h3>
-                    <p>We measure success by the positive impact our solutions have on businesses, individuals, and society.</p>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4L24 12V24L14 28L4 24V12L14 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 14L20 17V23L14 20L8 23V17L14 14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Impact</h4>
+                    <p>We measure success by the positive impact our solutions have on businesses and society.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🔒</div>
-                    <h3>Privacy</h3>
-                    <p>We prioritize data security and privacy, ensuring responsible handling of sensitive information.</p>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="6" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 10V8C10 5.79 11.79 4 14 4C16.21 4 18 5.79 18 8V10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Privacy</h4>
+                    <p>We prioritize data security and privacy, ensuring responsible handling of information.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🤖</div>
-                    <h3>Ethical AI</h3>
+                    <div class="value-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="4" y="8" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="15" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Ethical AI</h4>
                     <p>We develop AI systems that are fair, transparent, and beneficial to all stakeholders.</p>
                 </div>
             </div>
@@ -120,25 +176,52 @@
     </section>
 
     <!-- What We Do -->
-    <section class="what-we-do">
+    <section class="services-section">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
+            <div class="section-header">
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="section-title">What We <span class="accent-text">Do</span></h2>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🧠 AI Strategy & Consulting</h3>
-                    <p>We help organizations identify AI opportunities, develop implementation roadmaps, and create AI-driven transformation strategies.</p>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L28 10V22L16 28L4 22V10L16 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 12L22 15V21L16 18L10 21V15L16 12Z" fill="currentColor" fill-opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h4>AI Strategy & Consulting</h4>
+                    <p>We help organizations identify AI opportunities, develop implementation roadmaps, and create transformation strategies.</p>
                 </div>
                 <div class="service-card">
-                    <h3>🔬 Custom AI Development</h3>
-                    <p>Our team builds tailored AI solutions using machine learning, deep learning, NLP, and computer vision technologies.</p>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="10" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16H20M16 12V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Custom AI Development</h4>
+                    <p>Our team builds tailored AI solutions using machine learning, NLP, and computer vision technologies.</p>
                 </div>
                 <div class="service-card">
-                    <h3>📊 Data Analytics & Insights</h3>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 24L14 16L20 22L26 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="26" cy="10" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Data Analytics & Insights</h4>
                     <p>We transform raw data into actionable insights through advanced analytics and predictive modeling.</p>
                 </div>
                 <div class="service-card">
-                    <h3>🚀 AI Integration & Deployment</h3>
-                    <p>We ensure seamless integration of AI solutions into existing systems with scalable, production-ready deployments.</p>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L28 12V28L16 24L4 28V12L16 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 12V24" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>AI Integration & Deployment</h4>
+                    <p>Seamless integration of AI solutions into existing systems with scalable, production-ready deployments.</p>
                 </div>
             </div>
         </div>
@@ -146,11 +229,21 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
+        <div class="cta-bg">
+            <div class="grid-pattern"></div>
+            <div class="glow-orb glow-orb-3"></div>
+        </div>
         <div class="container">
             <div class="cta-content">
-                <h2>Let's Build the Future Together</h2>
-                <p>Partner with us to transform your business with AI innovation</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <span class="cta-tag">Let's Build the Future</span>
+                <h2>Ready to <span class="accent-text">Transform</span>?</h2>
+                <p>Partner with us to bring your AI vision to life.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">
+                    <span>Start Your Project</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -159,28 +252,35 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="assets/logo.png" alt="Intellinova Labs" style="height: 30px;">
-                        Intellinova Labs
-                    </h3>
-                    <p>AI consultancy providing intelligent solutions for your business.</p>
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-mark">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Intellinova</span>
+                    </a>
+                    <p>AI consultancy delivering intelligent solutions for forward-thinking businesses.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>📧 info@intellinovalabs.com</li>
-                        <li>📞 +46 700 456 718</li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>info@intellinovalabs.com</li>
+                            <li>+46 700 456 718</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -190,5 +290,21 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Intersection Observer
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.vm-card, .value-card, .service-card').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>

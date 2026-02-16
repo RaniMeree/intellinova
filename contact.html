@@ -8,21 +8,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grain-overlay"></div>
+    <div class="ambient-light"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Intellinova Labs" style="height: 40px; margin-right: 10px;">
-                    <span class="logo-text">Intellinova Labs</span>
+                    <div class="logo-mark">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Intellinova</span>
                 </a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -36,9 +44,14 @@
 
     <!-- Page Header -->
     <section class="page-header">
+        <div class="page-header-bg">
+            <div class="grid-pattern"></div>
+            <div class="glow-orb glow-orb-1"></div>
+        </div>
         <div class="container">
-            <h1 class="page-title">Get in <span class="gradient-text">Touch</span></h1>
-            <p class="page-subtitle">Let's discuss how our AI consultancy can help transform your business</p>
+            <span class="section-tag">Get in Touch</span>
+            <h1 class="page-title">Let's <span class="accent-text">Connect</span></h1>
+            <p class="page-subtitle">Have a question or want to work together? We'd love to hear from you.</p>
         </div>
     </section>
 
@@ -48,12 +61,17 @@
             <div class="contact-grid">
                 <!-- Contact Information -->
                 <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p class="contact-intro">Have a question or want to work with us? We'd love to hear from you.</p>
+                    <h2>Contact <span class="accent-text">Information</span></h2>
+                    <p class="contact-intro">Ready to transform your business with AI? Let's start a conversation.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="4" y="6" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M4 10L12 15L20 10" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
                                 <a href="mailto:info@intellinovalabs.com">info@intellinovalabs.com</a>
@@ -61,7 +79,12 @@
                         </div>
                         
                         <div class="contact-item">
-                            <div class="contact-icon">📞</div>
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 4H14C17.3137 4 20 6.68629 20 10V14C20 17.3137 17.3137 20 14 20H6C2.68629 20 0 17.3137 0 14V10C0 6.68629 2.68629 4 6 4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8 4L16 10" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
                                 <a href="tel:+46700456718">+46 700 456 718</a>
@@ -69,7 +92,12 @@
                         </div>
                         
                         <div class="contact-item">
-                            <div class="contact-icon">⏰</div>
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
                             <div class="contact-text">
                                 <h4>Business Hours</h4>
                                 <p>Monday - Friday: 9:00 AM - 6:00 PM CET</p>
@@ -78,12 +106,32 @@
                     </div>
 
                     <div class="contact-cta">
-                        <h3>Why Contact Us?</h3>
+                        <h3>Why Reach Out?</h3>
                         <ul class="contact-reasons">
-                            <li>💡 Discuss your AI project ideas</li>
-                            <li>🤝 Explore partnership opportunities</li>
-                            <li>📊 Request a consultation</li>
-                            <li>❓ Ask questions about our solutions</li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 4L16 8L10 12L4 8L10 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Discuss your AI project ideas
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 4L16 8L10 12L4 8L10 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Explore partnership opportunities
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 4L16 8L10 12L4 8L10 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Request a consultation
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 4L16 8L10 12L4 8L10 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Ask about our solutions
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -91,26 +139,30 @@
                 <!-- Contact Form -->
                 <div class="contact-form-container">
                     <form class="contact-form" id="contactForm">
-                        <h2>Send Us a Message</h2>
+                        <h2>Send a <span class="accent-text">Message</span></h2>
                         
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="your@email.com">
-                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+46 XXX XXX XXX">
+                            </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+46 XXX XXX XXX">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="Your company name">
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" placeholder="Your company">
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -127,12 +179,14 @@
 
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" required rows="6" placeholder="Tell us about your project or inquiry..."></textarea>
+                            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
 
                         <div class="form-message" id="formMessage"></div>
@@ -146,28 +200,35 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="assets/logo.png" alt="Intellinova Labs" style="height: 30px;">
-                        Intellinova Labs
-                    </h3>
-                    <p>AI consultancy providing intelligent solutions for your business.</p>
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-mark">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Intellinova</span>
+                    </a>
+                    <p>AI consultancy delivering intelligent solutions for forward-thinking businesses.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>📧 info@intellinovalabs.com</li>
-                        <li>📞 +46 700 456 718</li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>info@intellinovalabs.com</li>
+                            <li>+46 700 456 718</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -177,5 +238,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
