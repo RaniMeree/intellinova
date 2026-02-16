@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affärsplan - Intellinova Labs AB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-section img {
+            height: 50px;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 12px;
+            color: #666;
+        }
+        .document-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .document-title h1 {
+            font-size: 32px;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .document-title p {
+            color: #666;
+            font-size: 14px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #1e40af;
+            font-size: 18px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .section h3 {
+            color: #374151;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .section p, .section li {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .section ul {
+            margin-left: 20px;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+        }
+        @media print {
+            body {
+                padding: 15mm;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <img src="../assets/logo.png" alt="Intellinova Labs">
+            <span class="logo-text">Intellinova AB</span>
+        </div>
+        <div class="contact-info">
+            <strong>Intellinova AB</strong><br>
+            Bergsgatan 18 B LGH 1403<br>
+            632 26 Eskilstuna<br>
+            info@intellinovasolutions.com<br>
+            +46 700 456 718<br>
+            www.intellinovasolutions.com
+        </div>
+    </div>
+
+    <div class="document-title">
+        <h1>AFFÄRSPLAN</h1>
+        <p>Intellinova AB | 2026</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Sammanfattning</h2>
+        <div class="highlight-box">
+            <p><strong>Intellinova AB</strong> är ett AI-konsultbolag som erbjuder strategisk rådgivning och utveckling av skräddarsydda AI-lösningar för företag och organisationer. Bolaget grundades 2026 med visionen att göra artificiell intelligens tillgänglig, praktisk och transformerande för verksamheter av alla storlekar.</p>
+        </div>
+        <p>Vår kärnkompetens ligger inom maskininlärning, deep learning, natural language processing (NLP), computer vision och prediktiv dataanalys. Vi hjälper kunder att identifiera AI-möjligheter, utveckla implementeringsstrategier och bygga skräddarsydda lösningar som skapar verkligt affärsvärde.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Affärsidé</h2>
+        <p><strong>Vision:</strong> Att bli en ledande AI-partner som möjliggör digital transformation för svenska företag genom innovativa och etiska AI-lösningar.</p>
+        <p><strong>Mission:</strong> Att utveckla praktiska AI-lösningar som löser verkliga utmaningar och skapar mätbart värde för våra kunder.</p>
+        
+        <h3>Våra tjänster:</h3>
+        <ul>
+            <li><strong>AI-strategi & rådgivning</strong> – Hjälper organisationer identifiera AI-möjligheter och utveckla implementeringsstrategier</li>
+            <li><strong>Skräddarsydd AI-utveckling</strong> – Bygger anpassade AI-lösningar med maskininlärning, deep learning och NLP</li>
+            <li><strong>Dataanalys & insikter</strong> – Transformerar rådata till handlingsbara insikter genom avancerad analys</li>
+            <li><strong>AI-integration & driftsättning</strong> – Säkerställer sömlös integration av AI-lösningar i befintliga system</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Marknadsanalys</h2>
+        <h3>Målmarknad</h3>
+        <p>Vi riktar oss primärt mot små och medelstora företag (SME) samt organisationer inom:</p>
+        <ul>
+            <li>Hälso- och sjukvård</li>
+            <li>Juridiska tjänster</li>
+            <li>Finans och försäkring</li>
+            <li>Retail och e-handel</li>
+            <li>Offentlig sektor</li>
+        </ul>
+        
+        <h3>Marknadstrender</h3>
+        <ul>
+            <li>Ökande efterfrågan på AI-lösningar bland svenska företag</li>
+            <li>Brist på intern AI-kompetens driver behov av extern rådgivning</li>
+            <li>Fokus på etisk AI och dataskydd (GDPR-compliance)</li>
+            <li>Generativ AI och stora språkmodeller skapar nya möjligheter</li>
+        </ul>
+        
+        <h3>Konkurrensfördelar</h3>
+        <ul>
+            <li>Djup teknisk expertis kombinerat med affärsförståelse</li>
+            <li>Fokus på praktiska, implementerbara lösningar</li>
+            <li>Etiskt förhållningssätt till AI-utveckling</li>
+            <li>Flexibilitet och personlig service som mindre konsultbolag</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Organisation</h2>
+        <table>
+            <tr>
+                <th>Roll</th>
+                <th>Namn</th>
+                <th>Ansvar</th>
+            </tr>
+            <tr>
+                <td>VD & Grundare</td>
+                <td>Rani Meree</td>
+                <td>Strategisk ledning, kundrelationer, teknisk utveckling</td>
+            </tr>
+            <tr>
+                <td>Styrelseledamot</td>
+                <td>Rani Meree</td>
+                <td>Bolagsstyrning och strategiska beslut</td>
+            </tr>
+        </table>
+        
+        <h3>Framtida rekrytering</h3>
+        <p>Vid ökad efterfrågan planeras rekrytering av:</p>
+        <ul>
+            <li>AI/ML-utvecklare (år 2)</li>
+            <li>Data scientist (år 2-3)</li>
+            <li>Projektledare (år 3)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Marknadsföring & Försäljning</h2>
+        <h3>Marknadsföringskanaler</h3>
+        <ul>
+            <li><strong>Digital närvaro:</strong> Professionell webbplats, SEO, innehållsmarknadsföring</li>
+            <li><strong>Nätverk:</strong> LinkedIn, branschevenemang, tech-meetups</li>
+            <li><strong>Partnerskap:</strong> Samarbeten med andra IT-konsulter och systemleverantörer</li>
+            <li><strong>Referensmarknadsföring:</strong> Nöjda kunders rekommendationer</li>
+        </ul>
+        
+        <h3>Försäljningsstrategi</h3>
+        <ul>
+            <li>Inledande gratis konsultationer för att identifiera kundbehov</li>
+            <li>Pilotprojekt med begränsad omfattning för att demonstrera värde</li>
+            <li>Långsiktiga partnerskap med kontinuerlig support och vidareutveckling</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Prissättning</h2>
+        <table>
+            <tr>
+                <th>Tjänst</th>
+                <th>Pris (exkl. moms)</th>
+            </tr>
+            <tr>
+                <td>Konsulttjänster</td>
+                <td>1 000 kr/timme</td>
+            </tr>
+            <tr>
+                <td>Dagkonsultation</td>
+                <td>5 000 kr/dag</td>
+            </tr>
+            <tr>
+                <td>Projektbaserade uppdrag</td>
+                <td>Offert efter behovsanalys</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>7. Mål & Milstolpar</h2>
+        <h3>År 1 (2026)</h3>
+        <ul>
+            <li>Etablera bolaget och säkra första kunduppdrag</li>
+            <li>Bygga portfolio med 2-3 referensprojekt</li>
+            <li>Omsättning: 100 000 kr</li>
+        </ul>
+        
+        <h3>År 2 (2027)</h3>
+        <ul>
+            <li>Expandera kundbasen med 3-5 nya kunder</li>
+            <li>Eventuell rekrytering av första medarbetare</li>
+            <li>Omsättning: 300 000 kr</li>
+        </ul>
+        
+        <h3>År 3 (2028)</h3>
+        <ul>
+            <li>Etablera Intellinova som erkänt varumärke inom AI-konsulting</li>
+            <li>Team om 2-3 personer</li>
+            <li>Omsättning: 600 000 kr</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Risker & Utmaningar</h2>
+        <table>
+            <tr>
+                <th>Risk</th>
+                <th>Sannolikhet</th>
+                <th>Åtgärd</th>
+            </tr>
+            <tr>
+                <td>Svårt att få första kunder</td>
+                <td>Medel</td>
+                <td>Nätverkande, pilotprojekt, erbjuda inledande rabatter</td>
+            </tr>
+            <tr>
+                <td>Hög konkurrens</td>
+                <td>Hög</td>
+                <td>Differentiering genom nischfokus och personlig service</td>
+            </tr>
+            <tr>
+                <td>Teknisk utveckling går fort</td>
+                <td>Hög</td>
+                <td>Kontinuerlig kompetensutveckling och certifieringar</td>
+            </tr>
+            <tr>
+                <td>Beroende av nyckelperson</td>
+                <td>Medel</td>
+                <td>Dokumentera processer, rekrytera vid tillväxt</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>9. Finansiering</h2>
+        <ul>
+            <li><strong>Aktiekapital:</strong> 25 000 kr</li>
+            <li><strong>Finansieringsform:</strong> Eget kapital, organisk tillväxt</li>
+            <li><strong>Extern finansiering:</strong> Ej planerad i nuläget, kan bli aktuellt vid expansion</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Intellinova AB</strong></p>
+        <p>Bergsgatan 18 B LGH 1403, 632 26 Eskilstuna | info@intellinovasolutions.com | +46 700 456 718</p>
+        <p>www.intellinovasolutions.com</p>
+        <p style="margin-top: 10px; font-style: italic;">Dokumentet upprättat: Februari 2026</p>
+    </div>
+</body>
+</html>

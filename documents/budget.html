@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget - Intellinova Labs AB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-section img {
+            height: 50px;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 12px;
+            color: #666;
+        }
+        .document-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .document-title h1 {
+            font-size: 32px;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .document-title p {
+            color: #666;
+            font-size: 14px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #1e40af;
+            font-size: 18px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .section h3 {
+            color: #374151;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .section p {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .summary-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+        .number {
+            text-align: right;
+            font-family: 'Consolas', monospace;
+        }
+        .total-row {
+            background: #1e40af;
+            color: white;
+            font-weight: bold;
+        }
+        .total-row td {
+            border-color: #1e40af;
+        }
+        .subtotal-row {
+            background: #e5e7eb;
+            font-weight: 600;
+        }
+        .positive {
+            color: #10b981;
+        }
+        .negative {
+            color: #ef4444;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+        }
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        .metric-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .metric-card .value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        .metric-card .label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        @media print {
+            body {
+                padding: 15mm;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <img src="../assets/logo.png" alt="Intellinova Labs">
+            <span class="logo-text">Intellinova AB</span>
+        </div>
+        <div class="contact-info">
+            <strong>Intellinova AB</strong><br>
+            Bergsgatan 18 B LGH 1403<br>
+            632 26 Eskilstuna<br>
+            info@intellinovasolutions.com<br>
+            +46 700 456 718<br>
+            www.intellinovasolutions.com
+        </div>
+    </div>
+
+    <div class="document-title">
+        <h1>BUDGET 2026-2028</h1>
+        <p>Intellinova AB | Finansiell prognos</p>
+    </div>
+
+    <div class="section">
+        <h2>Sammanfattning</h2>
+        <div class="three-column">
+            <div class="metric-card">
+                <div class="value">25 000 kr</div>
+                <div class="label">Aktiekapital</div>
+            </div>
+            <div class="metric-card">
+                <div class="value">100 000 kr</div>
+                <div class="label">Beräknad omsättning År 1</div>
+            </div>
+            <div class="metric-card">
+                <div class="value">-50 000 kr</div>
+                <div class="label">Beräknat resultat År 1</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>1. Startkapital & Investeringar</h2>
+        <table>
+            <tr>
+                <th>Post</th>
+                <th class="number">Belopp (kr)</th>
+                <th>Kommentar</th>
+            </tr>
+            <tr>
+                <td>Aktiekapital</td>
+                <td class="number">25 000</td>
+                <td>Lagstadgat minimum</td>
+            </tr>
+            <tr>
+                <td>Dator & utrustning</td>
+                <td class="number">15 000</td>
+                <td>Laptop, skärm, tillbehör</td>
+            </tr>
+            <tr>
+                <td>Mjukvara & licenser</td>
+                <td class="number">5 000</td>
+                <td>Utvecklingsverktyg, cloud credits</td>
+            </tr>
+            <tr>
+                <td>Webbplats & marknadsföring</td>
+                <td class="number">3 000</td>
+                <td>Domän, hosting, initial marknadsföring</td>
+            </tr>
+            <tr>
+                <td>Juridik & registrering</td>
+                <td class="number">2 000</td>
+                <td>Bolagsverket, bankavgifter</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>Totalt startkapital behov</strong></td>
+                <td class="number"><strong>50 000</strong></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>2. Intäktsbudget År 1 (2026)</h2>
+        <table>
+            <tr>
+                <th>Uppdrag</th>
+                <th class="number">Typ</th>
+                <th class="number">Intäkt (kr)</th>
+            </tr>
+            <tr>
+                <td>Konsultation 1</td>
+                <td class="number">Rådgivning</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr>
+                <td>Konsultation 2</td>
+                <td class="number">Rådgivning</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr>
+                <td>Konsultation 3</td>
+                <td class="number">Rådgivning</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr>
+                <td>Projekt 1 - AI-strategi</td>
+                <td class="number">Större projekt</td>
+                <td class="number">50 000</td>
+            </tr>
+            <tr>
+                <td>Projekt 2 - Dataanalys</td>
+                <td class="number">Mindre projekt</td>
+                <td class="number">20 000</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>Totalt År 1</strong></td>
+                <td class="number">-</td>
+                <td class="number"><strong>100 000</strong></td>
+            </tr>
+        </table>
+        <div class="highlight-box">
+            <p><strong>Antaganden:</strong> Första året fokuseras på att bygga kundrelationer och skapa referenser. Konservativ uppskattning med begränsat antal uppdrag för att etablera trovärdighet.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Kostnadsbudget År 1 (2026)</h2>
+        <h3>Fasta kostnader per månad</h3>
+        <table>
+            <tr>
+                <th>Kostnadspost</th>
+                <th class="number">Per månad (kr)</th>
+                <th class="number">Per år (kr)</th>
+            </tr>
+            <tr>
+                <td>Bokföring & revision</td>
+                <td class="number">1 500</td>
+                <td class="number">18 000</td>
+            </tr>
+            <tr>
+                <td>Försäkringar</td>
+                <td class="number">500</td>
+                <td class="number">6 000</td>
+            </tr>
+            <tr>
+                <td>Telefon & internet</td>
+                <td class="number">500</td>
+                <td class="number">6 000</td>
+            </tr>
+            <tr>
+                <td>Mjukvara & prenumerationer</td>
+                <td class="number">800</td>
+                <td class="number">9 600</td>
+            </tr>
+            <tr>
+                <td>Webbhosting & domäner</td>
+                <td class="number">200</td>
+                <td class="number">2 400</td>
+            </tr>
+            <tr>
+                <td>Kontorsmaterial</td>
+                <td class="number">200</td>
+                <td class="number">2 400</td>
+            </tr>
+            <tr>
+                <td>Bankavgifter</td>
+                <td class="number">200</td>
+                <td class="number">2 400</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Summa fasta kostnader</strong></td>
+                <td class="number"><strong>3 900</strong></td>
+                <td class="number"><strong>46 800</strong></td>
+            </tr>
+        </table>
+
+        <h3>Rörliga kostnader</h3>
+        <table>
+            <tr>
+                <th>Kostnadspost</th>
+                <th class="number">Per år (kr)</th>
+            </tr>
+            <tr>
+                <td>Marknadsföring & reklam</td>
+                <td class="number">30 000</td>
+            </tr>
+            <tr>
+                <td>Resor & transport</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr>
+                <td>Kompetensutveckling & kurser</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr>
+                <td>Cloud-tjänster (AWS/Azure/GCP)</td>
+                <td class="number">12 000</td>
+            </tr>
+            <tr>
+                <td>Representation & nätverk</td>
+                <td class="number">5 000</td>
+            </tr>
+            <tr>
+                <td>Oförutsedda kostnader</td>
+                <td class="number">10 000</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Summa rörliga kostnader</strong></td>
+                <td class="number"><strong>77 000</strong></td>
+            </tr>
+        </table>
+
+        <h3>Lön & sociala avgifter</h3>
+        <table>
+            <tr>
+                <th>Post</th>
+                <th class="number">Per månad (kr)</th>
+                <th class="number">Per år (kr)</th>
+            </tr>
+            <tr>
+                <td>Bruttolön (VD)</td>
+                <td class="number">15 000</td>
+                <td class="number">180 000</td>
+            </tr>
+            <tr>
+                <td>Arbetsgivaravgifter (31,42%)</td>
+                <td class="number">4 713</td>
+                <td class="number">56 556</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Summa lönekostnader</strong></td>
+                <td class="number"><strong>19 713</strong></td>
+                <td class="number"><strong>236 556</strong></td>
+            </tr>
+        </table>
+        <div class="warning-box">
+            <p><strong>Notera:</strong> Löneuttag planeras påbörjas från månad 4 när intäkter börjar komma in. Första kvartalet finansieras via eget kapital.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Resultatbudget År 1-3</h2>
+        <table>
+            <tr>
+                <th>Post</th>
+                <th class="number">År 1 (2026)</th>
+                <th class="number">År 2 (2027)</th>
+                <th class="number">År 3 (2028)</th>
+            </tr>
+            <tr>
+                <td><strong>Intäkter</strong></td>
+                <td class="number"></td>
+                <td class="number"></td>
+                <td class="number"></td>
+            </tr>
+            <tr>
+                <td>Konsulttjänster</td>
+                <td class="number">100 000</td>
+                <td class="number">300 000</td>
+                <td class="number">600 000</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Summa intäkter</strong></td>
+                <td class="number"><strong>100 000</strong></td>
+                <td class="number"><strong>300 000</strong></td>
+                <td class="number"><strong>600 000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Kostnader</strong></td>
+                <td class="number"></td>
+                <td class="number"></td>
+                <td class="number"></td>
+            </tr>
+            <tr>
+                <td>Lönekostnader</td>
+                <td class="number">-60 000</td>
+                <td class="number">-180 000</td>
+                <td class="number">-360 000</td>
+            </tr>
+            <tr>
+                <td>Fasta kostnader</td>
+                <td class="number">-46 800</td>
+                <td class="number">-55 000</td>
+                <td class="number">-65 000</td>
+            </tr>
+            <tr>
+                <td>Rörliga kostnader</td>
+                <td class="number">-77 000</td>
+                <td class="number">-50 000</td>
+                <td class="number">-80 000</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Summa kostnader</strong></td>
+                <td class="number"><strong>-183 800</strong></td>
+                <td class="number"><strong>-285 000</strong></td>
+                <td class="number"><strong>-505 000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Resultat före skatt</strong></td>
+                <td class="number negative"><strong>-83 800</strong></td>
+                <td class="number positive"><strong>15 000</strong></td>
+                <td class="number positive"><strong>95 000</strong></td>
+            </tr>
+            <tr>
+                <td>Bolagsskatt (20,6%)</td>
+                <td class="number">0</td>
+                <td class="number">-3 090</td>
+                <td class="number">-19 570</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>Resultat efter skatt</strong></td>
+                <td class="number"><strong>-83 800</strong></td>
+                <td class="number"><strong>11 910</strong></td>
+                <td class="number"><strong>75 430</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>5. Likviditetsbudget År 1 (Kvartal)</h2>
+        <table>
+            <tr>
+                <th>Post</th>
+                <th class="number">Q1</th>
+                <th class="number">Q2</th>
+                <th class="number">Q3</th>
+                <th class="number">Q4</th>
+            </tr>
+            <tr>
+                <td>Ingående kassa</td>
+                <td class="number">25 000</td>
+                <td class="number">-15 700</td>
+                <td class="number">-25 200</td>
+                <td class="number">-10 200</td>
+            </tr>
+            <tr>
+                <td>Kundbetalningar</td>
+                <td class="number">10 000</td>
+                <td class="number">30 000</td>
+                <td class="number">40 000</td>
+                <td class="number">20 000</td>
+            </tr>
+            <tr>
+                <td>Lönekostnader</td>
+                <td class="number">-15 000</td>
+                <td class="number">-15 000</td>
+                <td class="number">-15 000</td>
+                <td class="number">-15 000</td>
+            </tr>
+            <tr>
+                <td>Fasta kostnader</td>
+                <td class="number">-11 700</td>
+                <td class="number">-11 700</td>
+                <td class="number">-11 700</td>
+                <td class="number">-11 700</td>
+            </tr>
+            <tr>
+                <td>Rörliga kostnader</td>
+                <td class="number">-14 000</td>
+                <td class="number">-12 500</td>
+                <td class="number">-8 300</td>
+                <td class="number">-42 200</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>Utgående kassa</strong></td>
+                <td class="number"><strong>-15 700</strong></td>
+                <td class="number"><strong>-25 200</strong></td>
+                <td class="number"><strong>-10 200</strong></td>
+                <td class="number"><strong>-58 900</strong></td>
+            </tr>
+        </table>
+        <div class="warning-box">
+            <p><strong>VIKTIGT:</strong> Budgeten visar negativt kassaflöde under hela första året. Företaget behöver ytterligare finansiering på cirka 60,000 - 80,000 kr utöver aktiekapitalet för att överleva första året.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Nyckeltal</h2>
+        <table>
+            <tr>
+                <th>Nyckeltal</th>
+                <th class="number">År 1</th>
+                <th class="number">År 2</th>
+                <th class="number">År 3</th>
+            </tr>
+            <tr>
+                <td>Vinstmarginal</td>
+                <td class="number">-84%</td>
+                <td class="number">4%</td>
+                <td class="number">13%</td>
+            </tr>
+            <tr>
+                <td>Beläggningsgrad</td>
+                <td class="number">5%</td>
+                <td class="number">15%</td>
+                <td class="number">30%</td>
+            </tr>
+            <tr>
+                <td>Genomsnittligt timpris</td>
+                <td class="number">1 000 kr</td>
+                <td class="number">1 000 kr</td>
+                <td class="number">1 000 kr</td>
+            </tr>
+            <tr>
+                <td>Antal fakturerbara timmar</td>
+                <td class="number">100</td>
+                <td class="number">300</td>
+                <td class="number">600</td>
+            </tr>
+            <tr>
+                <td>Antal anställda</td>
+                <td class="number">1</td>
+                <td class="number">1</td>
+                <td class="number">2-3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>7. Finansieringsplan</h2>
+        <div class="summary-box">
+            <h3>Kapitalbehov</h3>
+            <ul style="margin-left: 20px; font-size: 13px;">
+                <li><strong>Startkapital:</strong> 25 000 kr (aktiekapital)</li>
+                <li><strong>Driftskapital första året:</strong> 80 000 - 100 000 kr</li>
+                <li><strong>Totalt kapitalbehov:</strong> 105 000 - 125 000 kr</li>
+            </ul>
+            <h3 style="margin-top: 15px;">Finansieringskällor</h3>
+            <ul style="margin-left: 20px; font-size: 13px;">
+                <li>Eget kapital och sparande (primär)</li>
+                <li>Privatlån för att täcka underskott år 1</li>
+                <li>Eventuellt banklån vid behov</li>
+                <li>Fokus på att nå break-even i år 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Intellinova AB</strong></p>
+        <p>Bergsgatan 18 B LGH 1403, 632 26 Eskilstuna | info@intellinovasolutions.com | +46 700 456 718</p>
+        <p>www.intellinovasolutions.com</p>
+        <p style="margin-top: 10px; font-style: italic;">Budget upprättad: Februari 2026</p>
+    </div>
+</body>
+</html>
