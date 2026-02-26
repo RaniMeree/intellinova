@@ -315,6 +315,7 @@ a {
     align-items: center;
     padding: 120px 0 80px;
     overflow: hidden;
+    background: var(--bg-primary);
 }
 
 .hero-bg {
@@ -451,8 +452,6 @@ a {
 .vm-section {
     padding: var(--section-padding);
     background: var(--bg-secondary);
-    margin-top: -40px;
-    padding-top: 160px;
 }
 
 .vm-grid {
@@ -533,7 +532,6 @@ a {
 .projects-section {
     padding: var(--section-padding);
     background: var(--bg-primary);
-    margin-top: -40px;
 }
 
 .section-header {
@@ -676,7 +674,6 @@ a {
 .features-section {
     padding: var(--section-padding);
     background: var(--bg-secondary);
-    margin-top: -40px;
 }
 
 .features-grid {
@@ -740,8 +737,7 @@ a {
     position: relative;
     padding: 140px 0;
     overflow: hidden;
-    background: var(--bg-secondary);
-    margin-top: -40px;
+    background: var(--bg-primary);
 }
 
 .cta-bg {
