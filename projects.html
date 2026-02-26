@@ -250,7 +250,7 @@
                 if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, observerOptions);
-        document.querySelectorAll('.project-detail-card').forEach(el => observer.observe(el));
+        document.querySelectorAll('.project-detail-card, .section-header, .footer').forEach(el => observer.observe(el));
         window.addEventListener('scroll', () => {
             document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
         });

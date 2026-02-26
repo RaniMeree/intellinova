@@ -289,7 +289,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.vm-card, .value-card, .service-card').forEach(el => observer.observe(el));
+        document.querySelectorAll('.vm-card, .value-card, .service-card, .section-header, .story-content, .footer').forEach(el => observer.observe(el));
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
