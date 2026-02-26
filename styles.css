@@ -451,6 +451,8 @@ a {
 .vm-section {
     padding: var(--section-padding);
     background: var(--bg-secondary);
+    margin-top: -40px;
+    padding-top: 160px;
 }
 
 .vm-grid {
@@ -530,6 +532,8 @@ a {
    =========================== */
 .projects-section {
     padding: var(--section-padding);
+    background: var(--bg-primary);
+    margin-top: -40px;
 }
 
 .section-header {
@@ -672,6 +676,7 @@ a {
 .features-section {
     padding: var(--section-padding);
     background: var(--bg-secondary);
+    margin-top: -40px;
 }
 
 .features-grid {
@@ -735,6 +740,8 @@ a {
     position: relative;
     padding: 140px 0;
     overflow: hidden;
+    background: var(--bg-secondary);
+    margin-top: -40px;
 }
 
 .cta-bg {
