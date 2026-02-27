@@ -281,15 +281,22 @@
 
     <script src="script.js"></script>
     <script>
-        // Intersection Observer
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        // Intersection Observer for scroll animations
+        const observerOptions = { threshold: 0.05, rootMargin: '0px 0px 0px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.vm-card, .value-card, .service-card, .section-header, .story-content, .footer').forEach(el => observer.observe(el));
+        // Add 'animate' class first (hides elements), then observe for scroll reveal
+        document.querySelectorAll('.vm-card, .value-card, .service-card, .section-header, .story-content, .footer').forEach(el => {
+            el.classList.add('animate');
+            observer.observe(el);
+        });
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {

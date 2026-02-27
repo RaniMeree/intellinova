@@ -870,28 +870,47 @@ a {
    =========================== */
 .vm-card,
 .project-card,
-.feature-card {
+.feature-card,
+.value-card,
+.service-card,
+.project-detail-card {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.vm-card.animate,
+.project-card.animate,
+.feature-card.animate,
+.value-card.animate,
+.service-card.animate,
+.project-detail-card.animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .vm-card.visible,
 .project-card.visible,
-.feature-card.visible {
+.feature-card.visible,
+.value-card.visible,
+.service-card.visible,
+.project-detail-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.vm-card:nth-child(2),
-.project-card:nth-child(2),
-.project-card:nth-child(3),
-.feature-card:nth-child(2) { transition-delay: 0.1s; }
+.vm-card.animate:nth-child(2),
+.project-card.animate:nth-child(2),
+.project-card.animate:nth-child(3),
+.feature-card.animate:nth-child(2),
+.value-card.animate:nth-child(2),
+.service-card.animate:nth-child(2) { transition-delay: 0.1s; }
 
-.project-card:nth-child(3),
-.feature-card:nth-child(3) { transition-delay: 0.2s; }
+.project-card.animate:nth-child(3),
+.feature-card.animate:nth-child(3),
+.value-card.animate:nth-child(3),
+.service-card.animate:nth-child(3) { transition-delay: 0.2s; }
 
-.feature-card:nth-child(4) { transition-delay: 0.3s; }
+.feature-card.animate:nth-child(4),
+.value-card.animate:nth-child(4) { transition-delay: 0.3s; }
 
 /* ===========================
    ENHANCED HERO ANIMATIONS
@@ -957,9 +976,12 @@ a {
    SECTION HEADER ANIMATIONS
    =========================== */
 .section-header {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-header.animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .section-header.visible {
@@ -969,9 +991,12 @@ a {
 
 /* Story Content Animation */
 .story-content {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.story-content.animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .story-content.visible {
@@ -980,9 +1005,12 @@ a {
 }
 
 .story-text p {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.story-content.animate .story-text p {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .story-content.visible .story-text p {
@@ -996,9 +1024,12 @@ a {
 
 /* Contact Page Animations */
 .contact-info {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-info.animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .contact-info.visible {
@@ -1007,9 +1038,12 @@ a {
 }
 
 .contact-form-container {
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.contact-form-container.animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
 }
 
 .contact-form-container.visible {
@@ -1019,9 +1053,12 @@ a {
 
 .section-tag {
     display: inline-block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-header.animate .section-tag {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section-header.visible .section-tag {
@@ -1031,9 +1068,12 @@ a {
 }
 
 .section-title {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-header.animate .section-title {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section-header.visible .section-title {
@@ -1043,9 +1083,12 @@ a {
 }
 
 .section-subtitle {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-header.animate .section-subtitle {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section-header.visible .section-subtitle {
@@ -1058,9 +1101,12 @@ a {
    CTA SECTION ANIMATIONS
    =========================== */
 .cta-content {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cta-content.animate {
     opacity: 0;
     transform: scale(0.95);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .cta-content.visible {
@@ -1069,9 +1115,12 @@ a {
 }
 
 .cta-tag {
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+.cta-content.animate .cta-tag {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
 }
 
 .cta-content.visible .cta-tag {
@@ -1080,9 +1129,12 @@ a {
 }
 
 .cta-content h2 {
+    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+}
+
+.cta-content.animate h2 {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
 }
 
 .cta-content.visible h2 {
@@ -1091,9 +1143,12 @@ a {
 }
 
 .cta-content p {
+    transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
+}
+
+.cta-content.animate p {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
 }
 
 .cta-content.visible p {
@@ -1102,9 +1157,12 @@ a {
 }
 
 .cta-content .btn {
+    transition: opacity 0.5s ease 0.8s, transform 0.5s ease 0.8s, box-shadow 0.3s ease;
+}
+
+.cta-content.animate .btn {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 0.8s, transform 0.5s ease 0.8s, box-shadow 0.3s ease;
 }
 
 .cta-content.visible .btn {
@@ -1120,9 +1178,12 @@ a {
    FOOTER ANIMATIONS
    =========================== */
 .footer-content {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.footer.animate .footer-content {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .footer.visible .footer-content {
@@ -1131,9 +1192,12 @@ a {
 }
 
 .footer-brand {
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+.footer.animate .footer-brand {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
 }
 
 .footer.visible .footer-brand {
@@ -1142,9 +1206,12 @@ a {
 }
 
 .footer-column {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.footer.animate .footer-column {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .footer.visible .footer-column:nth-child(1) {
@@ -1160,8 +1227,11 @@ a {
 }
 
 .footer-bottom {
-    opacity: 0;
     transition: opacity 0.5s ease 0.5s;
+}
+
+.footer.animate .footer-bottom {
+    opacity: 0;
 }
 
 .footer.visible .footer-bottom {

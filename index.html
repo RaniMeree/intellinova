@@ -277,19 +277,22 @@
     <script>
         // Intersection Observer for scroll animations
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 0px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
+        // Add 'animate' class first (hides elements), then observe for scroll reveal
         document.querySelectorAll('.vm-card, .project-card, .feature-card, .section-header, .cta-content, .footer').forEach(el => {
+            el.classList.add('animate');
             observer.observe(el);
         });
 
