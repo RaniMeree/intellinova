@@ -1,6 +1,6 @@
-# Intellinova Solutions Website
+# Intellivation Solutions Website
 
-A modern, elegant, and responsive website for Intellinova Solutions - an AI company offering cutting-edge AI solutions.
+A modern, elegant, and responsive website for Intellivation Solutions - an AI company offering cutting-edge AI solutions.
 
 ## 🌟 Features
 
@@ -17,7 +17,7 @@ A modern, elegant, and responsive website for Intellinova Solutions - an AI comp
    - Hero section with call-to-action buttons
    - Vision & Mission overview
    - Featured projects showcase
-   - Why choose Intellinova section
+   - Why choose Intellivation section
    
 2. **Projects** (`projects.html`)
    - Overview of all three projects with links to dedicated pages
@@ -173,7 +173,7 @@ When you're ready to make the site dynamic, consider:
 
 ## 📄 License
 
-© 2026 Intellinova Solutions. All rights reserved.
+© 2026 Intellivation Solutions. All rights reserved.
 
 ## 📞 Contact
 
@@ -183,4 +183,4 @@ For questions or support:
 
 ---
 
-Built with ❤️ by Intellinova Solutions
+Built with ❤️ by Intellivation Solutions

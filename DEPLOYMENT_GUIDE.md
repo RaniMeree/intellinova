@@ -1,4 +1,4 @@
-# Deploying Intellinova Solutions Website to Render
+# Deploying Intellivation Solutions Website to Render
 
 ## Prerequisites
 - A GitHub account (free)
@@ -16,8 +16,8 @@ git config --global user.name "Your Name"
 
 1. Go to [GitHub](https://github.com) and sign in
 2. Click the **"+"** button (top right) → **"New repository"**
-3. Repository name: `intellinova-website` (or your choice)
-4. Description: "Intellinova Solutions - AI Company Website"
+3. Repository name: `intellivation-website` (or your choice)
+4. Description: "Intellivation Solutions - AI Company Website"
 5. Choose **Public** or **Private**
 6. **Do NOT** initialize with README (you already have one)
 7. Click **"Create repository"**
@@ -28,7 +28,7 @@ GitHub will show you commands. Use these:
 
 ```bash
 # Add the remote repository
-git remote add origin https://github.com/YOUR-USERNAME/intellinova-website.git
+git remote add origin https://github.com/YOUR-USERNAME/intellivation-website.git
 
 # Push your code
 git branch -M main
@@ -42,11 +42,11 @@ Replace `YOUR-USERNAME` with your actual GitHub username.
 1. Go to [Render](https://render.com) and sign up/sign in
 2. Click **"New +"** → **"Static Site"**
 3. Connect your GitHub account (authorize Render to access your repos)
-4. Select your `intellinova-website` repository
+4. Select your `intellivation-website` repository
 5. Configure the deployment:
 
    **Basic Settings:**
-   - **Name**: `intellinova-solutions` (or your choice)
+   - **Name**: `intellivation-solutions` (or your choice)
    - **Branch**: `main`
    - **Root Directory**: Leave empty (or `.` if required)
    - **Build Command**: Leave empty (static HTML doesn't need building)
@@ -57,7 +57,7 @@ Replace `YOUR-USERNAME` with your actual GitHub username.
 ### Step 5: Your Site is Live! 🎉
 
 - Render will deploy your site automatically
-- You'll get a free URL like: `https://intellinova-solutions.onrender.com`
+- You'll get a free URL like: `https://intellivation-solutions.onrender.com`
 - Every time you push to GitHub, Render auto-deploys the changes
 
 ## Custom Domain (Optional)

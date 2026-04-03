@@ -225,6 +225,6 @@ window.addEventListener('load', function() {
 // ===========================
 // CONSOLE MESSAGE
 // ===========================
-console.log('%c🚀 Intellinova Solutions', 'color: #6366f1; font-size: 24px; font-weight: bold;');
+console.log('%c🚀 Intellivation Solutions', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cTransforming Business with AI Solutions', 'color: #14b8a6; font-size: 14px;');
 console.log('%cVisit us at: intellinovasolutions.com', 'color: #64748b; font-size: 12px;');
