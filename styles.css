@@ -625,18 +625,19 @@ a {
 .project-visual {
     position: relative;
     height: 200px;
-    background: var(--bg-tertiary);
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
 }
 
 .project-visual img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
-    border-radius: 20px;
+    mix-blend-mode: multiply;
 }
 
 .project-visual-overlay {
