@@ -1,4 +1,4 @@
-// ===========================
+﻿// ===========================
 // MOBILE MENU TOGGLE
 // ===========================
 document.addEventListener('DOMContentLoaded', function() {
@@ -86,7 +86,7 @@ ${formData.message}
             await new Promise(resolve => setTimeout(resolve, 1500));
             
             // Create mailto link
-            const mailtoLink = `mailto:info@intellinovasolutions.com?subject=Contact Form: ${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+            const mailtoLink = `mailto:info@intellivation.io?subject=Contact Form: ${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
             
             // Open mailto link
             window.location.href = mailtoLink;
@@ -100,7 +100,7 @@ ${formData.message}
             
         } catch (error) {
             // Show error message
-            formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at info@intellinovasolutions.com';
+            formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at info@intellivation.io';
             formMessage.className = 'form-message error';
         } finally {
             // Reset button state
@@ -227,4 +227,4 @@ window.addEventListener('load', function() {
 // ===========================
 console.log('%c🚀 Intellivation Solutions', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cTransforming Business with AI Solutions', 'color: #14b8a6; font-size: 14px;');
-console.log('%cVisit us at: intellinovasolutions.com', 'color: #64748b; font-size: 12px;');
+console.log('%cVisit us at: intellivation.io', 'color: #64748b; font-size: 12px;');
