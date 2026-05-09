@@ -69,7 +69,7 @@ if (contactForm) {
         try {
             const response = await fetch('https://formspree.io/f/mbdwzvaz', {
                 method: 'POST',
-                headers: { 'Accept': 'application/json' },
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
 
