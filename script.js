@@ -67,41 +67,28 @@ if (contactForm) {
         formMessage.className = 'form-message';
         
         try {
-            // In a production environment, you would send this to a backend API
-            // For now, we'll simulate an email being sent using mailto
-            
-            // Create email body
-            const emailBody = `
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone || 'Not provided'}
-Company: ${formData.company || 'Not provided'}
-Subject: ${formData.subject}
+            const response = await fetch('https://formspree.io/f/mbdwzvaz', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: JSON.stringify(formData)
+            });
 
-Message:
-${formData.message}
-            `.trim();
-            
-            // Simulate API call delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Create mailto link
-            const mailtoLink = `mailto:info@intellivation.io?subject=Contact Form: ${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open mailto link
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            formMessage.textContent = 'Thank you for your message! We will get back to you soon. Your email client should open shortly.';
-            formMessage.className = 'form-message success';
-            
-            // Reset form
-            contactForm.reset();
-            
+            if (response.ok) {
+                formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                const errorMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Unknown error';
+                formMessage.textContent = `Sorry, there was an error: ${errorMsg}. Please try again or email us directly at info@intellivation.io`;
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            }
         } catch (error) {
-            // Show error message
             formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at info@intellivation.io';
             formMessage.className = 'form-message error';
+            formMessage.style.display = 'block';
         } finally {
             // Reset button state
             btnText.style.display = 'inline';
