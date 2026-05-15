@@ -287,6 +287,20 @@ a {
     width: 100%;
 }
 
+.nav-link-deck {
+    padding: 6px 14px !important;
+    border: 1px solid var(--accent-cyan) !important;
+    border-radius: 6px;
+    color: var(--accent-cyan) !important;
+    font-weight: 600 !important;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-link-deck::after { display: none !important; }
+.nav-link-deck:hover {
+    background: var(--accent-cyan) !important;
+    color: #08080c !important;
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
