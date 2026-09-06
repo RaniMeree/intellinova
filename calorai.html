@@ -39,7 +39,7 @@
     </nav>
 
     <!-- Product Hero -->
-    <section class="product-hero">
+    <section class="product-hero" data-neural="hero" data-neural-intensity="0.65">
         <div class="hero-bg">
             <div class="grid-pattern"></div>
             <div class="glow-orb glow-orb-1"></div>
@@ -333,6 +333,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="neural-bg.js"></script>
     <script>
         window.addEventListener('scroll', () => {
             document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);

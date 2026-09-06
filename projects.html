@@ -39,7 +39,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-neural="header">
         <div class="page-header-bg">
             <div class="grid-pattern"></div>
             <div class="glow-orb glow-orb-1"></div>
@@ -196,6 +196,12 @@
                     <h3>Overview</h3>
                     <p>StudyLab transforms any document — PDF, Word, PowerPoint, or YouTube link — into an immersive audio learning experience. With sentence-level highlighting, AI summaries, flashcards, quizzes, and spaced-repetition review, StudyLab turns passive reading into active learning. Available on iOS, Android, and web.</p>
 
+                    <div class="project-gallery">
+                        <img src="assets/studylab/01-listen.jpg" alt="StudyLab audio playback with sentence highlighting" loading="lazy">
+                        <img src="assets/studylab/02-understand.jpg" alt="StudyLab AI summary" loading="lazy">
+                        <img src="assets/studylab/04-test.jpg" alt="StudyLab practice exam" loading="lazy">
+                    </div>
+
                     <h3>Key Features</h3>
                     <ul class="feature-list">
                         <li><strong>Audio Playback:</strong> Convert any document to audio with live sentence highlighting and playback speed control</li>
@@ -333,6 +339,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="neural-bg.js"></script>
     <script>
         // Intersection Observer for scroll animations
         const observerOptions = { threshold: 0.05, rootMargin: '0px 0px 0px 0px' };

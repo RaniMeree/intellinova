@@ -54,7 +54,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" data-neural="hero">
         <div class="hero-bg">
             <div class="grid-pattern"></div>
             <div class="glow-orb glow-orb-1"></div>
@@ -79,9 +79,7 @@
                         <a href="contact.html" class="btn btn-secondary">Let's Talk</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/futuristic-ai-chip-circuit-board.png" alt="AI Chip Circuit Board">
-                </div>
+
             </div>
         </div>
     </section>
@@ -128,7 +126,8 @@
             <div class="projects-grid projects-grid-uniform">
                 <article class="project-card">
                     <div class="project-visual">
-                        <img src="assets/calorai.png" alt="CalorAI">
+                        <img src="assets/calorai.png" alt="CalorAI" class="logo-mono">
+                        <img src="assets/play_store_512.png" alt="" class="logo-color" aria-hidden="true">
                         <div class="project-visual-overlay"></div>
                     </div>
                     <div class="project-content">
@@ -145,7 +144,8 @@
                 </article>
                 <article class="project-card">
                     <div class="project-visual">
-                        <img src="assets/juracare.png" alt="JuraCare">
+                        <img src="assets/juracare.png" alt="JuraCare" class="logo-mono">
+                        <img src="assets/juracare-logo-colored.png" alt="" class="logo-color" aria-hidden="true">
                         <div class="project-visual-overlay"></div>
                     </div>
                     <div class="project-content">
@@ -162,7 +162,8 @@
                 </article>
                 <article class="project-card">
                     <div class="project-visual">
-                        <img src="assets/Realify.png" alt="Realify">
+                        <img src="assets/Realify.png" alt="Realify" class="logo-mono">
+                        <img src="assets/realify-colored-logo.png" alt="" class="logo-color" aria-hidden="true">
                         <div class="project-visual-overlay"></div>
                     </div>
                     <div class="project-content">
@@ -179,7 +180,8 @@
                 </article>
                 <article class="project-card">
                     <div class="project-visual">
-                        <img src="assets/almukhtabar.png" alt="Almukhtabar">
+                        <img src="assets/almukhtabar.png" alt="Almukhtabar" class="logo-mono">
+                        <img src="assets/almukhtabar-coloroed-logo.png" alt="" class="logo-color" aria-hidden="true">
                         <div class="project-visual-overlay"></div>
                     </div>
                     <div class="project-content">
@@ -187,6 +189,24 @@
                         <h3>Almukhtabar</h3>
                         <p>Newsroom editor and publishing workspace with AI-assisted drafting, headlines, and review workflows for Arabic editorial teams.</p>
                         <a href="projects.html#almukhtabar" class="project-link">
+                            <span>Learn More</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-visual">
+                        <img src="assets/studylab.png" alt="StudyLab" class="logo-mono">
+                        <span class="logo-color logo-mask" style="--mask: url(assets/studylab.png)" aria-hidden="true"></span>
+                        <div class="project-visual-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Education Technology</span>
+                        <h3>StudyLab</h3>
+                        <p>StudyLab transforms any document — PDF, Word, PowerPoint, or YouTube link — into an immersive audio learning experience.</p>
+                        <a href="projects.html#studylab" class="project-link">
                             <span>Learn More</span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -311,6 +331,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="neural-bg.js"></script>
     <script>
         // Intersection Observer for scroll animations
         const observerOptions = {
